@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "nvs_flash.h"
 #include "web/init.h"
+#include "web/webserver.h"
 
 void app_main()
 {
@@ -14,4 +15,6 @@ void app_main()
     ESP_ERROR_CHECK(ret);
 
     wifi_init();
+
+    start_webserver();
 }
